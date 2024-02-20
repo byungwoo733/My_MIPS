@@ -1,0 +1,25 @@
+ int asm_(int a, int b)
+ {
+  int r = (a < b) ? b : a;
+ return r;
+ }
+	.text 
+	.set  nomacro
+	.set  noreorder
+	
+	.globl asm_max
+	.ent   asm_max
+	
+#===================================
+
+# C code
+#include <stdio.h>
+
+# int asm_max(int a, int b);
+
+# int main()
+# {
+#  int x = asm_max(10, 100);
+#  int y = asm_max(200, 20);
+#  printf("%d %d\n", x, y);
+# }
